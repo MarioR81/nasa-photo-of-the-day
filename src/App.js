@@ -9,12 +9,12 @@ function App() {
         app! Have fun 🚀!
       </p>
       <p>LOGO placeholder - NASA Photo of the Day</p>
-      <div className='mainContainer'>Main Cont.
+      {/* <div className='mainContainer'>Main Container
         <p>Title</p>
         <p>Date</p>
         <span>Image</span>
         <p>Photo by: placeholder</p>
-      </div>
+      </div> */}
       <div className='copyright'> COPYRIGHT MMXX</div>
     </div>
   );
