@@ -8,6 +8,14 @@ function App() {
         Read through the instructions in the README.md file to build your NASA
         app! Have fun 🚀!
       </p>
+      <p>LOGO placeholder - NASA Photo of the Day</p>
+      <div className='mainContainer'>Main Cont.
+        <p>Title</p>
+        <p>Date</p>
+        <span>Image</span>
+        <p>Photo by: placeholder</p>
+      </div>
+      <div className='copyright'> COPYRIGHT MMXX</div>
     </div>
   );
 }
