@@ -20,7 +20,7 @@ function App() {
     <div className="App">
       <p>
         Read through the instructions in the README.md file to build your NASA
-        app! Have fun!
+        app! Have fun!!
       </p>
       <p>LOGO placeholder - NASA Photo of the Day</p>
       <NasaCard
