@@ -2,6 +2,22 @@ import React, {useState, useEffect} from "react";
 import "./App.css";
 import NasaCard from './NasaCard'
 import axios from 'axios';
+import styled from 'styled-components';
+
+
+const MainPage = styled.div`
+background-color: #121212;
+color: white;
+`;
+const Copyright = styled.div`
+font-size: 1.25rem;
+margin-top: 40px;
+margin-bottom: 20px;
+`;
+const NasaLogo = styled.img`
+width: 100px;
+`;
+
 
 function App() {
   const [data, setData] = useState([])
@@ -18,15 +34,14 @@ function App() {
 
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun!!
-      </p>
-      <p>LOGO placeholder - NASA Photo of the Day</p>
-      <NasaCard
-      data={data}
-      />
-      <div className='copyright'> COPYRIGHT MMXX</div>
+      <MainPage>
+          <NasaLogo src="../images/nasalogo.png" />
+          <p>LOGO placeholder - NASA Photo of the Day</p>
+          <NasaCard
+          data={data}
+          />
+          <Copyright> COPYRIGHT MMXX</Copyright>
+      </MainPage>
     </div>
   );
 }

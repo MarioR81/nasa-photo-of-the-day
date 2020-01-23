@@ -1,29 +1,50 @@
 import React from 'react';
 import {
-  Card, CardImg, CardText, CardBody, CardLink,
+  Card, CardText, CardBody,
   CardTitle, CardSubtitle
 } from 'reactstrap';
 import styled from 'styled-components';
 
-const NasaImg = styled.img`
-  width: 1000px;
-  
+const CardFormat = styled.div`
+  align-items: center;
+  width: 1600px;
+  background-color: #ab7cbd;
+  color: black;
+  margin: auto;
+`;
 
+const NasaImg = styled.img`
+  width: 100%;
+  align-items: center;
+  
+`;
+
+const Titleh1 = styled.h1`
+  font-size: 3rem;
+  text-align: center;
+`;
+
+const Titleh2 = styled.h1`
+  font-size: 1.5rem;
+  text-align: center;
+`;
+const CardText2 = styled.p`
+  padding:20px 35px 0 35px; 
 `;
 
 const NasaCard = (props) => {
 return (
+  <CardFormat>
   <Card>
-        <CardBody>
-          <CardTitle>{props.data.title}</CardTitle>
-          <CardSubtitle>Date: {props.data.date}</CardSubtitle>
-        </CardBody>
+        <CardFormat>
+          <Titleh1>{props.data.title}</Titleh1>
+          <Titleh2>Date: {props.data.date}</Titleh2>
         <NasaImg width="100%" src={props.data.hdurl} alt={props.data.title} />
-        <CardBody>
-          <CardText>Description: {props.data.explanation}</CardText>
-          <CardSubtitle>Photo Copyright by: {props.data.copyright}</CardSubtitle>
-        </CardBody>
+          <CardText2>Description: {props.data.explanation}</CardText2>
+          <Titleh2>Photo Copyright by: {props.data.copyright}</Titleh2>
+        </CardFormat>
       </Card>
+  </CardFormat>
 );
 };
 
