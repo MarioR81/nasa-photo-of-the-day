@@ -3,6 +3,7 @@ import "./App.css";
 import NasaCard from './NasaCard'
 import axios from 'axios';
 import styled from 'styled-components';
+import NasaLogo from './images/NASAdark.jpg'
 
 
 const MainPage = styled.div`
@@ -12,10 +13,15 @@ color: white;
 const Copyright = styled.div`
 font-size: 1.25rem;
 margin-top: 40px;
-margin-bottom: 20px;
+padding-bottom: 20px;
 `;
-const NasaLogo = styled.img`
-width: 100px;
+const Headline = styled.p`
+  font-size: 4rem;
+`;
+const Head = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 
@@ -35,8 +41,11 @@ function App() {
   return (
     <div className="App">
       <MainPage>
-          <NasaLogo src="../images/nasalogo.png" />
-          <p>LOGO placeholder - NASA Photo of the Day</p>
+          <Head>
+              <img src={NasaLogo} width="175px" alt="Nasa Logo"/>
+              <Headline>Photo of the Day</Headline>
+              <img src={NasaLogo} width="175px" alt="Nasa Logo"/>
+          </Head>
           <NasaCard
           data={data}
           />
